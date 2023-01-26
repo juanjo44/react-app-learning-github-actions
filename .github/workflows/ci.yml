@@ -2,15 +2,17 @@ name: CI
 on:
   pull_request:
     branches: [develop]
+  push:
+    branches: [develop]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - name: Use NodeJS
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: "14"
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
       - name: Install dependencies
         run: npm install
       - name: Check Code Formatting
@@ -19,3 +21,12 @@ jobs:
         run: npm test -- --coverage
         env:
           CI: true
+      - name: Build project
+        if: github.event_name == 'push'
+        run: npm run build
+      - name: Deploy to Stagging
+        if: github.event_name == 'push'
+        run: npx surge --project ./build --domain resolute-salt.surge.sh
+        env:
+          SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
