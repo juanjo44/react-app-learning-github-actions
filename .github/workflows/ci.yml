@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: "14"
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Check Code Formatting
         run: npm run format:check
       - name: Run Automated Tests
