@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -38,8 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@semantic-release/github": "^8.0.7",
     "prettier": "2.8.3",
-    "semantic-release": "^20.1.0"
+    "semantic-release": "^16.0.4"
   }
 }
