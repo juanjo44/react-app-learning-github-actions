@@ -1,7 +1,7 @@
 name: Notify on Issue
 on:
   issues:
-    tyoes: [opened]
+    types: [opened]
 
 jobs:
   slack-message:
