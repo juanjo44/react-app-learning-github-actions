@@ -8249,7 +8249,7 @@ try {
 
   const octokit = new github.GitHub(token);
 
-  const response = octokit.rest.issues.create({
+  const response = octokit.rest.create({
     // owner: github.context.repo.owner,
     // repo: github.context.repo.repo,
     ...github.context.repo,
