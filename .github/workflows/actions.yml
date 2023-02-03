@@ -14,6 +14,7 @@ jobs:
             juanjo44
       - run: |
           echo ${{ steps.issue.outputs.issue }}
+      - run: chmod +x .github/actions/hello-docker/entrypoint.sh
       - uses: ./.github/actions/hello-docker
         id: hello
         with:
