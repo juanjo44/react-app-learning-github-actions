@@ -4,6 +4,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Send a slack Message
+        uses: ./.github/actions/slack
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+          message: Hello Crazy PHP world(Slack)
       - uses: ./.github/actions/issue
         id: issue
         with:

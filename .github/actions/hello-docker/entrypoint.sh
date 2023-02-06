@@ -2,7 +2,7 @@
 
 if [true]
 then
-  echo 'erro'
+  echo 'error'
   exit 1
 fi
 
