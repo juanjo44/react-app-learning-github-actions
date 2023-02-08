@@ -4,6 +4,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: |
+          pwd
+          ls -lh ./.github/actions/slack
       - name: Send a slack Message
         uses: ./.github/actions/slack
         with:
