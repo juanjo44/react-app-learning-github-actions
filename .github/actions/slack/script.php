@@ -50,7 +50,7 @@ $response = Requests::post(
 
 echo "::group::Slack reponse\n";
 var_dump($response);
-echo "::engroup::\n";
+echo "::endgroup::\n";
 
 
 if(!$response->success){
