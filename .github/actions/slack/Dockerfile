@@ -8,4 +8,3 @@ RUN apt-get -y install zip
 RUN composer install
 
 ENTRYPOINT [ "php", "/usr/src/app/script.php" ]
-

@@ -10,7 +10,7 @@ inputs:
     required: true
 runs:
   using: "docker"
-  image: "DOCKERFILE"
+  image: "Dockerfile"
   args:
     - ${{ inputs.slack_webhook }}
     - ${{ inputs.message }}
