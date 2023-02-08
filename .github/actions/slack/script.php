@@ -14,7 +14,7 @@ $response = Requests::post(
     'Content-type' => 'application/json'
   ),
   json_encode(array (
-    'blocks' => 
+    'blocks' =>
       array (
         array (
           "type" => "section",
