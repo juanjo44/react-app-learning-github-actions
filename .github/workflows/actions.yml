@@ -8,7 +8,7 @@ jobs:
         uses: ./.github/actions/slack
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-          message: Hello Crazy PHP world(Slack)
+          message: Hello Crazy PHP world
       - uses: ./.github/actions/issue
         id: issue
         with:
