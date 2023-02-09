@@ -12,7 +12,7 @@ jobs:
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           message: Hello Crazy PHP world
-      - uses: ./.github/actions/issue
+      - uses: juanjo44/open-issue-course@v1
         id: issue
         with:
           token: ${{ secrets.TOKEN_GITHUB}}
